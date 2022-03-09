@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: #000;
+    }
+    .glowing{
+        text-transform: uppercase;
+        font-size: 60px;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-shadow:0px -1px 2px white,
+                    0px -3px 6px rgba(242, 125,12, 1),
+                    0px -6px 12px rgba(255, 150,100, 1),
+                    0px -10px 20px rgba(242, 125,12, 1),
+                    0px -15px 30px rgba(255, 50,50, 1),
+                    0px -21px 42px rgba(240, 127,19, 1);
+                    animation: effect 0.001s ease infinite, colorchange 0.5s linear infinite;
+
+    }
+    @keyframes effect {
+        50%{
+            text-shadow:0px -4px 8px white,
+                    0px -12px 24px rgba(242, 125,12, 1),
+                    0px -24px 48px rgba(255, 150,100, 1),
+                    0px -40px 80px rgba(242, 125,12, 1),
+                    0px -15px 120px rgba(255, 50,50, 1),
+                    0px -21px 168px rgba(240, 127,19, 1),
+                    ;
+        }        
+    }
+    @keyframes colorchange {
+        to{
+            filter:hue-rotate(360deg);
+        }
+        
+    }
+
+
+</style>
+<body>
+    <h1 class="glowing">PUBG BATTLE</h1>
+    
+</body>
+</html>
